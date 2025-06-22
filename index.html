@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameFinder - Buscador de Videojuegos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-center">🎮 GameFinder</h1>
+            <p class="text-center mt-2">Encuentra tus videojuegos favoritos</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Search Section -->
+        <section id="search-section" class="mb-12">
+            <div class="max-w-2xl mx-auto">
+                <div class="flex shadow-lg rounded-lg overflow-hidden">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="Buscar juegos (ej. 'Zelda', 'Mario')" 
+                        class="flex-grow px-4 py-3 focus:outline-none"
+                    >
+                    <button 
+                        id="search-btn" 
+                        class="bg-purple-600 text-white px-6 py-3 hover:bg-purple-700 transition"
+                    >
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <button class="filter-btn active" data-genre="all">Todos</button>
+                    <button class="filter-btn" data-genre="action">Acción</button>
+                    <button class="filter-btn" data-genre="rpg">RPG</button>
+                    <button class="filter-btn" data-genre="adventure">Aventura</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dinámico via JS -->
+        </section>
+
+        <!-- Game Details Modal (hidden by default) -->
+        <div id="game-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-start">
+                        <h2 id="modal-title" class="text-2xl font-bold"></h2>
+                        <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="mt-4">
+                        <!-- Dinámico via JS -->
+                    </div>
+                    <div class="mt-6 flex justify-between">
+                        <button id="add-favorite" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                            ❤️ Añadir a favoritos
+                        </button>
+                        <a id="game-link" href="#" target="_blank" class="text-purple-600 hover:underline">
+                            Ver más detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favorites Section -->
+        <section id="favorites-section" class="mt-16 bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fas fa-heart text-red-500 mr-2"></i> Tus Juegos Favoritos
+            </h2>
+            <div id="favorites-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Dinámico via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 GameFinder - Proyecto académico</p>
+            <p class="mt-2">
+                <a href="#" class="hover:underline">GitHub Repo</a> | 
+                <a href="#" class="hover:underline">API Docs</a>
+            </p>
+        </div>
+    </footer>
+    <script src="app.js"> </script>
+</body>
+</html>
