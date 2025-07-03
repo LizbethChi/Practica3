@@ -30,3 +30,9 @@
 - **HTML5** – Estructura de la interfaz.
 - **JavaScript (Vanilla)** – Lógica de filtrado, búsqueda, favoritos, y renderizado dinámico.
 - **Tailwind CSS** – Estilos modernos y responsivos.
+
+---
+#### ©Integrantes del equipo
+1. Adanelly Gamboa
+2. Lizeth Puc
+3. Lizbeth Chi
